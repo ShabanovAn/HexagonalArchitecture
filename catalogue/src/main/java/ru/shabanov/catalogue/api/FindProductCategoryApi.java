@@ -8,5 +8,5 @@ import java.util.Optional;
 @FunctionalInterface
 public interface FindProductCategoryApi {
 
-    Optional<ProductCategoryData> findProductCategory(ProductCategoryId id);
+    Optional<ProductCategoryData> findProductCategoryById(ProductCategoryId id);
 }

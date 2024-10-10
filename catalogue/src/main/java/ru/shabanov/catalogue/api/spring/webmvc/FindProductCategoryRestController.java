@@ -18,10 +18,10 @@ public class FindProductCategoryRestController {
         this.findProductCategoryApi = findProductCategoryApi;
     }
 
-    @GetMapping(path = "api/catalogue/product-categories/{id:\\d+}",
+    @GetMapping(path = "/api/catalogue/product-categories/{id:\\d+}",
     produces = "application/vnd.selmag.catalogue.product-category.v1+json")
     public ResponseEntity<ProductCategoryPresentationV1> findProductCategory(@PathVariable("id") long id) {
-        return  this.findProductCategoryApi.findProductCategory(new ProductCategoryId(id))
+        return  this.findProductCategoryApi.findProductCategoryById(new ProductCategoryId(id))
                 .map(category -> ResponseEntity.ok(new ProductCategoryPresentationV1(category.id().value(), category.title(),
                         category.details(), category.parentId() != null ? category.parentId().value() : null,
                         category.version())))
