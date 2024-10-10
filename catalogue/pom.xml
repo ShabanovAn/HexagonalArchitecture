@@ -11,6 +11,7 @@
     <groupId>ru.shabanov</groupId>
     <artifactId>catalogue</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>catalogue</name>
     <description>catalogue</description>
     <url/>
@@ -20,6 +21,14 @@
     <developers>
         <developer/>
     </developers>
+    <modules>
+        <module>catalog-share</module>
+        <module>catalogue-api</module>
+        <module>catalogue-spi</module>
+        <module>catalogue-core</module>
+        <module>catalogue-spi-adapter-spring-jdbc</module>
+        <module>catalogue-microservice</module>
+    </modules>
     <scm>
         <connection/>
         <developerConnection/>
