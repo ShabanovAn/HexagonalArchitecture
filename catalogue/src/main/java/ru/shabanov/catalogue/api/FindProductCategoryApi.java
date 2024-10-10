@@ -1,4 +1,4 @@
-package ru.shabanov.catalogue;
+package ru.shabanov.catalogue.api;
 
 import ru.shabanov.catalogue.data.ProductCategoryData;
 import ru.shabanov.catalogue.id.ProductCategoryId;
@@ -6,7 +6,7 @@ import ru.shabanov.catalogue.id.ProductCategoryId;
 import java.util.Optional;
 
 @FunctionalInterface
-public interface FuncProductCategoryApi {
+public interface FindProductCategoryApi {
 
     Optional<ProductCategoryData> findProductCategory(ProductCategoryId id);
 }
